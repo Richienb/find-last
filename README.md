@@ -1,41 +1,36 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# find-last [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/find-last/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/find-last)
 
-My awesome module.
+Like Array#find but searches the array backwards.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/find-last.png)](https://npmjs.com/package/find-last)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install find-last
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const findLast = require("find-last");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+findLast(["a", "b", "bba", "cc", "d"], value => value.includes("a"));
+//=> "bba"
 ```
 
 ## API
 
-### theModule(input, options?)
+### findLast(array, predicate)
 
-#### input
+#### array
 
-Type: `string`
+Type: `array`
 
-Lorem ipsum.
+The array to search.
 
-#### options
+#### predicate
 
-Type: `object`
+Type: `(item, index, array) => boolean`
 
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The predicate function to call on each item.
