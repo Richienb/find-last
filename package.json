@@ -18,7 +18,9 @@
 		"test": "xo && ava"
 	},
 	"keywords": [],
-	"dependencies": {},
+	"dependencies": {
+		"find-last-index": "^1.0.0"
+	},
 	"devDependencies": {
 		"ava": "^3.11.1",
 		"eslint-config-richienb": "^0.4.2",

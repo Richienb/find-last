@@ -1,9 +1,5 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") {
-		throw new TypeError(`Expected a string, got ${typeof input}`)
-	}
+const findLastIndex = require("find-last-index")
 
-	return `${input} & ${postfix}`
-}
+module.exports = (array, predicate) => array[findLastIndex(array, predicate)]
